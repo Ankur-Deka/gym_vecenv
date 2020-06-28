@@ -10,6 +10,7 @@ def worker(remote, parent_remote, env_fn_wrapper):
         if cmd == 'step':
             ob, reward, done, info = env.step(data)
             if np.any(done):
+                info['terminal_observation'] = ob
                 ob = env.reset()
             remote.send((ob, reward, done, info))
         elif cmd == 'reset':
