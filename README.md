@@ -2,7 +2,7 @@
 Python3 wrapper for running multiple OpenAI Gym environments in parallel
 
 ### Difference in this fork
-In the original repo, each env is auto reset if one of the agents in the env returns `done`. In this fork, `info['terminal_observation']` will contain the terminal observation for an env if it is auto reset. 
+In the original repo, each env is auto reset if one of the agents in the env returns `done`. In this fork, `info['terminal_observation']` will contain the terminal observation for an env if it is auto reset. Not sure if dummy vec env will work correctly.
 
 
 ### Description
