@@ -1,9 +1,11 @@
 # gym_vecenv
 Python3 wrapper for running multiple OpenAI Gym environments in parallel
 
-## Difference in this fork
+### Difference in this fork
 In the original repo, each env is auto reset if one of the agents in the env returns `done`. In this fork, `info['terminal_observation']` will contain the terminal observation for an env if it is auto reset. 
 
+
+### Description
 All the code is from [OpenAI Baselines Repository](https://github.com/openai/baselines)
 
 The parallel environment functionality was the only reason I used Baselines, but installing it requires resolving MuJoCo, mujoco-py and various other dependencies which is troublesome. Hence, I repackaged the required functionality into another package which is very easy to install and exposes the same API
